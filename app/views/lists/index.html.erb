@@ -1,0 +1,10 @@
+<h2>Movies</h2>
+<h3>Save any kind of movies</h3>
+
+
+<%= link_to "Create a movie list", new_list_path, class: "btn btn-success" %>
+
+<h2> My Lists </h2>
+<% @lists.each do |list| %>
+<%= list.name %>
+<% end %>

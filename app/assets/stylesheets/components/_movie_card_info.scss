@@ -1,0 +1,24 @@
+.movie-card-info{
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: grid;
+}
+
+.movie-card-info img{
+  height: 200px;
+  width: 50%;
+  object-fit: contain;
+}
+
+.movie-card-info h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.movie-card-info p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}

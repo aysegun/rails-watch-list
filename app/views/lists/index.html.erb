@@ -1,21 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpaperaccess.com/full/6060694.jpg);">
   <div class="container">
     <h3>Save any kind of movies</h3>
-
-
-    <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat position-absolute top-25 end-50" %>
+    <div class= "col text-center">
+      <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
     </div>
+  </div>
 </div>
 
 <div class="card-category">
-    <h2> My Lists </h2>
+    <h3 class= "mb-0"> My Lists </h3>
 </div>
+
 <div class="cards">
-      <% @lists.each do |list| %>
-      <%= link_to list_path(list) do %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80)" >
-      <%= list.name %>
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), class: "text-decoration-none" do %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaperaccess.com/full/2000048.jpg)" >
+        <div class= "text-center mt-5">
+          <%= list.name %>
+        </div>
       </div>
-      <% end %>
-      <% end %>
+    <% end %>
+  <% end %>
 </div>
